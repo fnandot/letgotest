@@ -1,0 +1,68 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+    - { resource: let_shout_config.yml }
+
+parameters:
+    locale: en
+
+framework:
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        handler_id:  session.handler.native_file
+        save_path:   "%kernel.root_dir%/../var/sessions/%kernel.environment%"
+    fragments:       ~
+    http_method_override: true
+    assets: ~
+    cache:
+      app: cache.adapter.redis
+      default_redis_provider: '%env(LET_SHOUT_REDIS_DSN)%'
+
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+
+fos_rest:
+    param_fetcher_listener: true
+    versioning:
+        enabled: true
+    view:
+        formats:
+            json: true
+        mime_types:
+            json: ['application/json']
+    routing_loader:
+        default_format: json
+    serializer:
+        version: "1.0"
+    format_listener:
+        rules:
+            - { path: '^/', priorities: ['json'], fallback_format: json, prefer_extension: true }
+    exception:
+        enabled: true
+        codes:
+            'LetShout\Application\CommandHandler\GetLastUserTweets\Exception\MaxNumberOfTweetsExceededException': HTTP_BAD_REQUEST
+            'LetShout\Domain\Model\User\Exception\UserByNameNotFoundException': HTTP_NOT_FOUND
+        messages:
+            'LetShout\Application\CommandHandler\GetLastUserTweets\Exception\MaxNumberOfTweetsExceededException': true
+            'LetShout\Domain\Model\User\Exception\UserByNameNotFoundException': true
+
+jms_serializer:
+    metadata:
+        auto_detection: true
+        directories:
+            entities:
+                namespace_prefix: "LetShout\\Infrastructure\\Model"
+                path: "@LetShoutApiBundle/Resources/config/serializer"

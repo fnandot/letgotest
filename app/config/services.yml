@@ -1,0 +1,60 @@
+services:
+
+    LetShout\Infrastructure\Symfony\Bundle\ApiBundle\Controller\UsersController:
+        arguments: ['@tactician.commandbus']
+        calls:
+            - [setContainer, ['@service_container']]
+
+    LetShout\Application\CommandHandler\GetLastUserTweets\GetLastUserTweetsCommandHandler:
+        arguments:
+          - '@LetShout\Infrastructure\Model\User\UserTwitterRepository'
+          - '@LetShout\Infrastructure\Model\Tweet\TweetTwitterRepository'
+          - '@LetShout\Infrastructure\CommandHandler\GetLastUserTweets\GetLastUserTweetsCommandResultToTweetResourcesDataTransformer'
+        tags:
+            - { name: tactician.handler, command: LetShout\Application\CommandHandler\GetLastUserTweets\GetLastUserTweetsCommand }
+
+    LetShout\Infrastructure\CommandHandler\GetLastUserTweets\GetLastUserTweetsCommandResultToJsonDataTransformer:
+        arguments: ['@jms_serializer.serializer']
+
+    LetShout\Infrastructure\Model\User\Translator\TwitterUserToUserTranslator: ~
+    LetShout\Infrastructure\Model\Tweet\Translator\TwitterTweetToTweetTranslator:
+        arguments:
+          - '@LetShout\Infrastructure\Model\User\Translator\TwitterUserToUserTranslator'
+
+    LetShout\Infrastructure\Model\User\UserTwitterRepository:
+        arguments:
+          - '@let_shout.twitter_client'
+          - '@LetShout\Infrastructure\Model\User\Translator\TwitterUserToUserTranslator'
+
+    LetShout\Infrastructure\Model\Tweet\TweetTwitterRepository:
+        arguments:
+          - '@let_shout.twitter_client'
+          - '@LetShout\Infrastructure\Model\Tweet\Translator\TwitterTweetToTweetTranslator'
+
+    LetShout\Infrastructure\Model\Tweet\TweetToTweetResourceDataTransformer:
+        arguments: ['@let_shout.formatter']
+
+    LetShout\Infrastructure\CommandHandler\GetLastUserTweets\GetLastUserTweetsCommandResultToTweetResourcesDataTransformer:
+        arguments: ['@LetShout\Infrastructure\Model\Tweet\TweetToTweetResourceDataTransformer']
+
+    LetShout\Infrastructure\Service\Twitter\OAuth\TwitterOAuthClientFactory:
+        public: false
+        arguments:
+          - '%let_shout_api.configuration.twitter.base_uri%'
+          - '%let_shout_api.configuration.twitter.consumer_key%'
+          - '%let_shout_api.configuration.twitter.consumer_secret%'
+          - '%let_shout_api.configuration.twitter.token%'
+          - '%let_shout_api.configuration.twitter.token_secret%'
+
+    LetShout\Infrastructure\Service\Twitter\OAuth\TwitterOAuthClient:
+        class: LetShout\Infrastructure\Service\Twitter\OAuth\TwitterOAuthClient
+        public: false
+        factory: ['@LetShout\Infrastructure\Service\Twitter\OAuth\TwitterOAuthClientFactory', create]
+
+    LetShout\Infrastructure\Service\String\Format\UpperCaseStringFormatter: ~
+
+    LetShout\Infrastructure\Service\Twitter\Cache\TwitterCachedClient:
+        arguments:
+          - '@cache.app'
+          - '@LetShout\Infrastructure\Service\Twitter\OAuth\TwitterOAuthClient'
+          - '%let_shout_api.configuration.cache.ttl%'

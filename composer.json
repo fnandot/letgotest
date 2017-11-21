@@ -1,0 +1,76 @@
+{
+  "name": "fpradas/let-shout-api",
+  "description": "LetShout API",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Fernando Pradas",
+      "email": "contact@fernandopradas.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "LetShout\\": "src/",
+      "LetShoutTest\\": "tests/"
+    },
+    "classmap": [
+      "app/AppCache.php",
+      "app/AppKernel.php"
+    ]
+  },
+  "require": {
+    "php": ">=7.1.1",
+    "symfony/symfony": "3.3.*",
+    "symfony/monolog-bundle": "^3.1.0",
+    "sensio/distribution-bundle": "^5.0.19",
+    "sensio/framework-extra-bundle": "^3.0.2",
+    "incenteev/composer-parameter-handler": "^2.0",
+    "ramsey/uuid": "^3.7",
+    "guzzlehttp/guzzle": "^6.3",
+    "friendsofsymfony/rest-bundle": "^2.0",
+    "jms/serializer-bundle": "^1.1",
+    "guzzlehttp/oauth-subscriber": "^0.3.0",
+    "league/tactician-bundle": "^1.1",
+    "predis/predis": "^1.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.4",
+    "sensio/generator-bundle": "^3.0",
+    "symfony/phpunit-bridge": "^3.0",
+    "behat/behat": "^3.4.2",
+    "imbo/behat-api-extension": "^2.0",
+    "friendsofphp/php-cs-fixer": "^2.8"
+  },
+  "scripts": {
+    "symfony-scripts": [
+        "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+    ],
+    "post-install-cmd": [
+        "@symfony-scripts"
+    ],
+    "post-update-cmd": [
+        "@symfony-scripts"
+    ]
+  },
+  "config": {
+    "platform": {
+      "php": "7.1.1"
+    }
+  },
+  "extra": {
+    "symfony-app-dir": "app",
+    "symfony-bin-dir": "bin",
+    "symfony-var-dir": "var",
+    "symfony-web-dir": "web",
+    "symfony-tests-dir": "tests",
+    "incenteev-parameters": {
+      "file": "app/config/parameters.yml"
+    }
+  }
+}

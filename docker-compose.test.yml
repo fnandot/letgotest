@@ -1,0 +1,44 @@
+version: '2'
+
+services:
+  fpm:
+    image: php:7.1-fpm-jessie
+    environment:
+      - LET_SHOUT_REDIS_DSN=redis://redis
+      - LET_SHOUT_API_TWITTER_BASE_URI=http://api.twitter.com
+      - LET_SHOUT_API_TWITTER_CONSUMER_KEY=ConsumerKey
+      - LET_SHOUT_API_TWITTER_CONSUMER_SECRET=ConsumerSecret
+      - LET_SHOUT_API_TWITTER_TOKEN=Token
+      - LET_SHOUT_API_TWITTER_TOKEN_SECRET=TokenSecret
+    volumes:
+      - "./:/app/"
+    networks:
+      test: ~
+
+  nginx:
+    image: nginx:1.13.6
+    volumes:
+      - "./web:/app/web"
+      - ./docker/prod/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      test: ~
+
+  mockserver:
+      build: docker/test/mockserver
+      image: fnando08/lshout:mockserver
+      volumes:
+        - ./tests/Integration/responses/api.twitter.com/:/server/api.twitter.com
+      command: -p 80 -m /server/api.twitter.com/
+      networks:
+        test:
+          aliases:
+            - api.twitter.com
+
+  redis:
+    image: redis:3.2
+    networks:
+      test: ~
+
+networks:
+  test: ~
+

@@ -1,0 +1,105 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+    "id": 3584975536,
+    "id_str": "3584975536",
+    "name": "letgo",
+    "screen_name": "letgo",
+    "location": "Global",
+    "profile_location": null,
+    "description": "It's time to snap, post, chat and sell. It's time to letgo!",
+    "url": "https:\/\/t.co\/FSQwT0R1A8",
+    "entities": {
+        "url": {
+            "urls": [
+                {
+                    "url": "https:\/\/t.co\/FSQwT0R1A8",
+                    "expanded_url": "http:\/\/app.letgo.com\/twitter",
+                    "display_url": "app.letgo.com\/twitter",
+                    "indices": [
+                        0,
+                        23
+                    ]
+                }
+            ]
+        },
+        "description": {
+            "urls": []
+        }
+    },
+    "protected": false,
+    "followers_count": 51473,
+    "friends_count": 916,
+    "listed_count": 124,
+    "created_at": "Tue Sep 08 06:33:03 +0000 2015",
+    "favourites_count": 75551,
+    "utc_offset": -18000,
+    "time_zone": "Eastern Time (US & Canada)",
+    "geo_enabled": true,
+    "verified": true,
+    "statuses_count": 8442,
+    "lang": "en",
+    "status": {
+        "created_at": "Sun Nov 19 20:18:00 +0000 2017",
+        "id": 932342214541414401,
+        "id_str": "932342214541414401",
+        "text": "\"When my husband &amp; I moved into our new home, we had virtually nothing until a friend second-handed us this adorabl\u2026 https:\/\/t.co\/OjAy7ysH1U",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https:\/\/t.co\/OjAy7ysH1U",
+                    "expanded_url": "https:\/\/twitter.com\/i\/web\/status\/932342214541414401",
+                    "display_url": "twitter.com\/i\/web\/status\/9\u2026",
+                    "indices": [
+                        121,
+                        144
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\">TweetDeck<\/a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 2,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "000000",
+    "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+    "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/875366526630711296\/UK22AUId_normal.jpg",
+    "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/875366526630711296\/UK22AUId_normal.jpg",
+    "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/3584975536\/1487689550",
+    "profile_link_color": "FF3F55",
+    "profile_sidebar_border_color": "000000",
+    "profile_sidebar_fill_color": "000000",
+    "profile_text_color": "000000",
+    "profile_use_background_image": false,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false,
+    "translator_type": "none"
+}

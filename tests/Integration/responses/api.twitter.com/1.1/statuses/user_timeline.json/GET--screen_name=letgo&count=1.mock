@@ -1,0 +1,241 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+[
+    {
+        "created_at": "Fri Nov 17 20:14:27 +0000 2017",
+        "id": 931616542739107840,
+        "id_str": "931616542739107840",
+        "text": "@meowaniecarter @DaveandBusters \ud83e\udd11\ud83e\udd11\ud83e\udd11 https:\/\/t.co\/8fXpxwIQiK",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "meowaniecarter",
+                    "name": "M. Carter",
+                    "id": 829404918087819265,
+                    "id_str": "829404918087819265",
+                    "indices": [
+                        0,
+                        15
+                    ]
+                },
+                {
+                    "screen_name": "DaveandBusters",
+                    "name": "Dave & Buster's",
+                    "id": 50728264,
+                    "id_str": "50728264",
+                    "indices": [
+                        16,
+                        31
+                    ]
+                }
+            ],
+            "urls": [],
+            "media": [
+                {
+                    "id": 931616431904559105,
+                    "id_str": "931616431904559105",
+                    "indices": [
+                        36,
+                        59
+                    ],
+                    "media_url": "http:\/\/pbs.twimg.com\/tweet_video_thumb\/DO3ENXqWkAEOArS.jpg",
+                    "media_url_https": "https:\/\/pbs.twimg.com\/tweet_video_thumb\/DO3ENXqWkAEOArS.jpg",
+                    "url": "https:\/\/t.co\/8fXpxwIQiK",
+                    "display_url": "pic.twitter.com\/8fXpxwIQiK",
+                    "expanded_url": "https:\/\/twitter.com\/letgo\/status\/931616542739107840\/photo\/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 450,
+                            "h": 258,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 450,
+                            "h": 258,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 450,
+                            "h": 258,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 931616431904559105,
+                    "id_str": "931616431904559105",
+                    "indices": [
+                        36,
+                        59
+                    ],
+                    "media_url": "http:\/\/pbs.twimg.com\/tweet_video_thumb\/DO3ENXqWkAEOArS.jpg",
+                    "media_url_https": "https:\/\/pbs.twimg.com\/tweet_video_thumb\/DO3ENXqWkAEOArS.jpg",
+                    "url": "https:\/\/t.co\/8fXpxwIQiK",
+                    "display_url": "pic.twitter.com\/8fXpxwIQiK",
+                    "expanded_url": "https:\/\/twitter.com\/letgo\/status\/931616542739107840\/photo\/1",
+                    "type": "animated_gif",
+                    "sizes": {
+                        "small": {
+                            "w": 450,
+                            "h": 258,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 450,
+                            "h": 258,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 450,
+                            "h": 258,
+                            "resize": "fit"
+                        }
+                    },
+                    "video_info": {
+                        "aspect_ratio": [
+                            75,
+                            43
+                        ],
+                        "variants": [
+                            {
+                                "bitrate": 0,
+                                "content_type": "video\/mp4",
+                                "url": "https:\/\/video.twimg.com\/tweet_video\/DO3ENXqWkAEOArS.mp4"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http:\/\/twitter.com\" rel=\"nofollow\">Twitter Web Client<\/a>",
+        "in_reply_to_status_id": 931582982766448640,
+        "in_reply_to_status_id_str": "931582982766448640",
+        "in_reply_to_user_id": 829404918087819265,
+        "in_reply_to_user_id_str": "829404918087819265",
+        "in_reply_to_screen_name": "meowaniecarter",
+        "user": {
+            "id": 3584975536,
+            "id_str": "3584975536",
+            "name": "letgo",
+            "screen_name": "letgo",
+            "location": "Global",
+            "description": "It's time to snap, post, chat and sell. It's time to letgo!",
+            "url": "https:\/\/t.co\/FSQwT0R1A8",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https:\/\/t.co\/FSQwT0R1A8",
+                            "expanded_url": "http:\/\/app.letgo.com\/twitter",
+                            "display_url": "app.letgo.com\/twitter",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 51473,
+            "friends_count": 916,
+            "listed_count": 124,
+            "created_at": "Tue Sep 08 06:33:03 +0000 2015",
+            "favourites_count": 75551,
+            "utc_offset": -18000,
+            "time_zone": "Eastern Time (US & Canada)",
+            "geo_enabled": true,
+            "verified": true,
+            "statuses_count": 8442,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+            "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/875366526630711296\/UK22AUId_normal.jpg",
+            "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/875366526630711296\/UK22AUId_normal.jpg",
+            "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/3584975536\/1487689550",
+            "profile_link_color": "FF3F55",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "01a9a39529b27f36",
+            "url": "https:\/\/api.twitter.com\/1.1\/geo\/id\/01a9a39529b27f36.json",
+            "place_type": "city",
+            "name": "Manhattan",
+            "full_name": "Manhattan, NY",
+            "country_code": "US",
+            "country": "Estados Unidos",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -74.026675,
+                            40.683935
+                        ],
+                        [
+                            -73.910408,
+                            40.683935
+                        ],
+                        [
+                            -73.910408,
+                            40.877483
+                        ],
+                        [
+                            -74.026675,
+                            40.877483
+                        ]
+                    ]
+                ]
+            },
+            "attributes": []
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 1,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "und"
+    }
+]

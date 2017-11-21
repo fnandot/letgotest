@@ -1,0 +1,19 @@
+LetShout\Infrastructure\Model\Tweet\TweetResource:
+    exclusion_policy: ALL
+    properties:
+        id:
+           expose: true
+           type: string
+           since_version: 1.0
+        externalId:
+           expose: true
+           type: string
+           since_version: 1.0
+        createdAt:
+           expose: true
+           type: DateTimeImmutable
+           since_version: 1.0
+        text:
+           expose: true
+           type: string
+           since_version: 1.0

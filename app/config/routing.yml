@@ -1,0 +1,6 @@
+users:
+    type:    rest
+    prefix: /{version}/
+    resource: 'LetShout\Infrastructure\Symfony\Bundle\ApiBundle\Controller\UsersController'
+    requirements:
+        _format: "json"

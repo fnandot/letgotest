@@ -1,0 +1,9 @@
+parameters:
+    secret: <Your secret>
+    twitter_consumer_key: <Your Twitter Consumer Key>
+    twitter_consumer_secret: <Your Twitter Consumer Secret>
+    twitter_token: <Your Twitter Token>
+    twitter_token_secret: <Your Twitter Token Secret>
+    redis_scheme: tcp
+    redis_host: 127.0.0.1
+    redis_port: 6379

@@ -1,0 +1,12 @@
+default:
+    suites:
+        default:
+            paths:
+                features: "%paths.base%/tests/Integration/Behat/features"
+            contexts:
+                - Imbo\BehatApiExtension\Context\ApiContext: ~
+
+    extensions:
+        Imbo\BehatApiExtension:
+            apiClient:
+                base_uri: http://nginx

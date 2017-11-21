@@ -1,0 +1,12 @@
+let_shout_api:
+    cache:
+        enabled:              true
+        ttl:                  60
+    formatter:
+        type:                 uppercase
+    twitter:
+        base_uri:             '%env(LET_SHOUT_API_TWITTER_BASE_URI)%'
+        consumer_key:         '%env(LET_SHOUT_API_TWITTER_CONSUMER_KEY)%'
+        consumer_secret:      '%env(LET_SHOUT_API_TWITTER_CONSUMER_SECRET)%'
+        token:                '%env(LET_SHOUT_API_TWITTER_TOKEN)%'
+        token_secret:         '%env(LET_SHOUT_API_TWITTER_TOKEN_SECRET)%'
