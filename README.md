@@ -1,8 +1,8 @@
-#LetShout
+# LetShout
 
 A Twitter based API.
 
-##Technology
+## Technology
 
 Principal technologies used in this project are:
 ```
@@ -29,7 +29,7 @@ But If you would rather to build the image locally on your system, then execute:
 make build-runner
 ```
 
-##Use case
+## Use case
 
 Our business model is simple, we have Tweets and we have Users. A Tweet belongs to a user and a lot of Tweets can belong to the same user (many-to-one relationship).
 ```
@@ -52,7 +52,7 @@ Response format should be in JSON
 Tweets text should be in uppercase
 ```
 
-##About software engineering
+## About software engineering
 
 This application is based on several concepts of DDD and, mainly, in a layered architecture. Thus, we have 3 main layers of abstraction that are Application, Domain and Infrastucture.
 
@@ -75,7 +75,7 @@ Therefore, we need another *actor* to translate the *twitter.com* model to our D
 Here come into play the TweetTranslator and UserTranslator which, as we have said, are nothing more than two classes responsible for translating the *twitter.com* model to the LetShout model.
 
 
-##Cache
+## Cache
 
 Cache can be implemented in different layers of your application,
 but I decided to put cache layer on TwitterClient before external HTTP communication to cache external API responses.
@@ -102,14 +102,14 @@ let_shout_api:
         ttl: 60
 ``` 
 
-##Testing
+## Testing
 
 Whe have 2 types of tests:
 
 - Unit tests
 - Integration tests
 
-###Unit tests
+### Unit tests
 
 To run them execute:
 ```
@@ -118,7 +118,7 @@ make test
 
 It will show you unit tests in *testdox* format and a code coverage report. 
 
-###Integration tests
+### Integration tests
 
 I have used Behat to implement the integration tests, even though that Behat it is mainly oriented to acceptance and functional tests.
 
@@ -141,7 +141,7 @@ To run integration tests execute:
 make test-integration
 ```
 
-##Getting started
+## Getting started
 
 The build an run this project the only thing you'll need is *make*, *docker* and *docker-compose*.
 
@@ -178,7 +178,7 @@ Where:
  
 Example: http://localhost:8080/1.0/users/letgo/tweets.json?count=10
 
-##Things that could be improved
+## Things that could be improved
 
 - Make application errors more verbose (now any error with comunication will be shown as "username not found").
 - Add authentication to our api, like JWT or OAuth.
